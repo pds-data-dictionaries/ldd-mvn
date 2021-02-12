@@ -9,12 +9,12 @@
       http://pds.nasa.gov/pds4/pds/v1 http://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1E00.xsd">
 
    <name>MAVEN</name>
-   <ldd_version_id>1.0.1.1</ldd_version_id>
+   <ldd_version_id>1.1.1.0</ldd_version_id>
    <dictionary_type>Mission</dictionary_type>
    <full_name>Joseph N. Mafi</full_name>
    <steward_id>ppi</steward_id>
    <namespace_id>mvn</namespace_id>
-   <last_modification_date_time>2015-05-18T13:30:00Z</last_modification_date_time>
+   <last_modification_date_time>2020-02-12T14:26:54Z</last_modification_date_time>
    
    <DD_Attribute>
       <name>mission_phase_name</name>
