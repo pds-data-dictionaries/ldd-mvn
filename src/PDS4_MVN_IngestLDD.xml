@@ -20,29 +20,49 @@
       <name>mission_phase_name</name>
       <version_id>1.0</version_id>
       <local_identifier>mvn.mission_phase_name</local_identifier>
-      <nillable_flag>false</nillable_flag>
+      <nillable_flag>true</nillable_flag>
       <submitter_name>J. Mafi</submitter_name>
       <definition>The mission_phase_name attribute provides the mission-defined name of a mission phase.</definition>
       <DD_Value_Domain>
          <enumeration_flag>true</enumeration_flag>
          <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
          <maximum_characters>255</maximum_characters>
-		<DD_Permissible_Value>
-			<value>Cruise</value>
-			<value_meaning>The period of observations while traveling to a destination.</value_meaning>
-		</DD_Permissible_Value>
-		<DD_Permissible_Value>
-			<value>Mars Orbital Insertion</value>
-			<value_meaning>The period of observations during the MAVEN's entry into Mar's orbit.</value_meaning>
-		</DD_Permissible_Value>
-		<DD_Permissible_Value>
-		        <value>Transition</value>
-		        <value_meaning>The period of time when the spacecraft was changing from cruise to orbital operations. Also referred to as 'Comissioning'.</value_meaning>
-		</DD_Permissible_Value>
-		<DD_Permissible_Value>
-			<value>Prime Mission</value>
-			<value_meaning>The period of observations during the primary objective of the mission.</value_meaning>
-		</DD_Permissible_Value>
+                <DD_Permissible_Value>
+                        <value>Cruise</value>
+                        <value_meaning>The period of observations during the MAVEN's flight from Earth to Mars.</value_meaning>
+                </DD_Permissible_Value>
+                <DD_Permissible_Value>
+                        <value>Mars Orbital Insertion</value>
+                        <value_meaning>The period of observations during the MAVEN's entry into Mar's orbit.</value_meaning>
+                </DD_Permissible_Value>
+                <DD_Permissible_Value>
+                        <value>Prime Mission</value>
+                        <value_meaning>The period of observations during the primary objective of the mission.</value_meaning>
+                </DD_Permissible_Value>
+                <DD_Permissible_Value>
+                        <value>Transition</value>
+                        <value_meaning>The period of time when the spacecraft was changing from cruise to orbital operations. Also referred to as 'Comissioning'.</value_meaning>
+                </DD_Permissible_Value>
+                <DD_Permissible_Value>
+                        <value>EM-1</value>
+                        <value_meaning>Extended Mission 1: The period of observations during the first extension of the MAVEN mission covering 2015-11-17T00:00:00 to 2016-10-01T00:00:00.</value_meaning>
+                </DD_Permissible_Value>
+                <DD_Permissible_Value>
+                        <value>EM-2</value>
+                        <value_meaning>Extended Mission 2: The period of observations during the second extension of the MAVEN mission covering 2016-10-01T00:00:00 to 2018-10-01T00:00:00.</value_meaning>
+                </DD_Permissible_Value>
+                <DD_Permissible_Value>
+                        <value>EM-3</value>
+                        <value_meaning>Extended Mission 3: The period of observations during the third extension of the MAVEN mission covering 2018-10-01T00:00:00 to 2019-10-01T00:00:00.</value_meaning>
+                </DD_Permissible_Value>
+                <DD_Permissible_Value>
+                        <value>EM-4</value>
+                        <value_meaning>Extended Mission 4: The period of observations during the fourth extension of the MAVEN mission covering 2019-10-01T00:00:00 to 2021-10-01T00:00:00.</value_meaning>
+                </DD_Permissible_Value>
+                <DD_Permissible_Value>
+                        <value>EM-5</value>
+                        <value_meaning>Extended Mission 5: The period of observations during the fifth extension of the MAVEN mission covering 2021-10-01T00:00:00 and extending indefinitely.</value_meaning>
+                </DD_Permissible_Value>
       </DD_Value_Domain>
    </DD_Attribute>
    
@@ -121,7 +141,7 @@
       <DD_Association>
          <identifier_reference>mvn.mission_phase_name</identifier_reference>
          <reference_type>attribute_of</reference_type>
-         <minimum_occurrences>1</minimum_occurrences>
+         <minimum_occurrences>0</minimum_occurrences>
          <maximum_occurrences>*</maximum_occurrences>
       </DD_Association>
       <DD_Association>
