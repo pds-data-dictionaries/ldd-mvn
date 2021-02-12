@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-  <!-- PDS4 Schematron for Name Space Id:example  Version:1.0.0.0 - Thu Dec 10 08:15:05 UTC 2020 -->
-  <!-- Generated from the PDS4 Information Model Version 1.15.0.0 - System Build 11a -->
+  <!-- PDS4 Schematron for Name Space Id:mvn  Version:1.0.1.1 - Fri Feb 12 00:32:56 UTC 2021 -->
+  <!-- Generated from the PDS4 Information Model Version 1.13.0.0 - System Build 10a -->
   <!-- *** This PDS4 schematron file is an operational deliverable. *** -->
 <sch:schema xmlns:sch="http://purl.oclc.org/dsdl/schematron" queryBinding="xslt2">
 
@@ -8,7 +8,7 @@
 
   <sch:ns uri="http://www.w3.org/2001/XMLSchema-instance" prefix="xsi"/>
   <sch:ns uri="http://pds.nasa.gov/pds4/pds/v1" prefix="pds"/>
-  <sch:ns uri="http://pds.nasa.gov/pds4/example/v1" prefix="example"/>
+  <sch:ns uri="http://pds.nasa.gov/pds4/mission/mvn/v1" prefix="mvn"/>
 
 		   <!-- ================================================ -->
 		   <!-- NOTE:  There are two types of schematron rules.  -->
@@ -18,4 +18,10 @@
 		   <!--        lists. These two types of rules have been -->
 		   <!--        merged together in the rules below.       -->
 		   <!-- ================================================ -->
+  <sch:pattern>
+    <sch:rule context="mvn:MAVEN/mvn:mission_phase_name">
+      <sch:assert test=". = ('Cruise', 'Mars Orbital Insertion', 'Prime Mission', 'Transition')">
+        The attribute mvn:mission_phase_name must be equal to one of the following values 'Cruise', 'Mars Orbital Insertion', 'Prime Mission', 'Transition'.</sch:assert>
+    </sch:rule>
+  </sch:pattern>
 </sch:schema>
