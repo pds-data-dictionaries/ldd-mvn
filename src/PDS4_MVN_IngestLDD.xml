@@ -1,17 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-model
-   href="http://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1400.sch"
+   href="http://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1E00.sch"
    schematypens="http://purl.oclc.org/dsdl/schematron"?>
 
 <Ingest_LDD xmlns="http://pds.nasa.gov/pds4/pds/v1"
    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
    xsi:schemaLocation="
-      http://pds.nasa.gov/pds4/pds/v1 
-      file:////128.97.68.67/work1/pds4/pds/v1/PDS4_PDS_1400.xsd
-">
+      http://pds.nasa.gov/pds4/pds/v1 http://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1E00.xsd">
 
    <name>MAVEN</name>
    <ldd_version_id>1.0.1.1</ldd_version_id>
+   <dictionary_type>Mission</dictionary_type>
    <full_name>Joseph N. Mafi</full_name>
    <steward_id>ppi</steward_id>
    <namespace_id>mvn</namespace_id>
@@ -118,38 +117,39 @@
       <submitter_name>J. Mafi</submitter_name>
       <definition>The MAVEN class is the container for MAVEN mission-specific
          metadata elements.</definition>
+      <element_flag>true</element_flag>
       <DD_Association>
-         <local_identifier>mvn.mission_phase_name</local_identifier>
+         <identifier_reference>mvn.mission_phase_name</identifier_reference>
          <reference_type>attribute_of</reference_type>
          <minimum_occurrences>1</minimum_occurrences>
          <maximum_occurrences>*</maximum_occurrences>
       </DD_Association>
       <DD_Association>
-         <local_identifier>mvn.spacecraft_clock_start_count</local_identifier>
+         <identifier_reference>mvn.spacecraft_clock_start_count</identifier_reference>
          <reference_type>attribute_of</reference_type>
          <minimum_occurrences>0</minimum_occurrences>
          <maximum_occurrences>1</maximum_occurrences>
       </DD_Association>
       <DD_Association>
-         <local_identifier>mvn.spacecraft_clock_stop_count</local_identifier>
+         <identifier_reference>mvn.spacecraft_clock_stop_count</identifier_reference>
          <reference_type>attribute_of</reference_type>
          <minimum_occurrences>0</minimum_occurrences>
          <maximum_occurrences>1</maximum_occurrences>
       </DD_Association>
       <DD_Association>
-         <local_identifier>mvn.mission_event_time_start_count</local_identifier>
+         <identifier_reference>mvn.mission_event_time_start_count</identifier_reference>
          <reference_type>attribute_of</reference_type>
          <minimum_occurrences>0</minimum_occurrences>
          <maximum_occurrences>1</maximum_occurrences>
       </DD_Association>
       <DD_Association>
-         <local_identifier>mvn.mission_event_time_stop_count</local_identifier>
+         <identifier_reference>mvn.mission_event_time_stop_count</identifier_reference>
          <reference_type>attribute_of</reference_type>
          <minimum_occurrences>0</minimum_occurrences>
          <maximum_occurrences>1</maximum_occurrences>
       </DD_Association>
       <DD_Association>
-         <local_identifier>mvn.Parameter</local_identifier>
+         <identifier_reference>mvn.Parameter</identifier_reference>
          <reference_type>component_of</reference_type>
          <minimum_occurrences>0</minimum_occurrences>
          <maximum_occurrences>*</maximum_occurrences>
@@ -164,19 +164,19 @@
       <definition>The Parameter class provides information about a specified
          data parameter.</definition>
       <DD_Association>
-         <local_identifier>pds.name</local_identifier>
+         <identifier_reference>pds.name</identifier_reference>
          <reference_type>attribute_of</reference_type>
          <minimum_occurrences>1</minimum_occurrences>
          <maximum_occurrences>1</maximum_occurrences>
       </DD_Association>
       <DD_Association>
-         <local_identifier>pds.description</local_identifier>
+         <identifier_reference>pds.description</identifier_reference>
          <reference_type>attribute_of</reference_type>
          <minimum_occurrences>1</minimum_occurrences>
          <maximum_occurrences>1</maximum_occurrences>
       </DD_Association>
       <DD_Association>
-         <local_identifier>pds.value</local_identifier>
+         <identifier_reference>pds.value</identifier_reference>
          <reference_type>attribute_of</reference_type>
          <minimum_occurrences>1</minimum_occurrences>
          <maximum_occurrences>1</maximum_occurrences>
