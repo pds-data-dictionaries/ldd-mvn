@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-  <!-- PDS4 XML/Schema for Name Space Id:mvn  Version:1.0.1.1 - Fri Feb 12 00:32:56 UTC 2021 -->
+  <!-- PDS4 XML/Schema for Name Space Id:mvn  Version:1.1.1.0 - Fri Feb 12 22:28:09 UTC 2021 -->
   <!-- Generated from the PDS4 Information Model Version 1.13.0.0 - System Build 10a -->
   <!-- *** This PDS4 product schema is an operational deliverable. *** -->
   <!--                                                                           -->
   <!--               Dictionary Stack                                            -->
   <!-- 1.13.0.0 - pds: - Common Dictionary                                       -->
-  <!-- 1.0.1.1 - mvn: - MAVEN                                                    -->
+  <!-- 1.1.1.0 - mvn: - MAVEN                                                    -->
   <!--   file:/home/runner/work/ldd-mvn/ldd-mvn/src/PDS4_MVN_IngestLDD.xml       -->
   <!--                                                                           -->
   <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
@@ -14,7 +14,7 @@
     xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"
     elementFormDefault="qualified"
     attributeFormDefault="unqualified"
-    version="1.0.1.1">
+    version="1.1.1.0">
  
     <xs:import namespace="http://pds.nasa.gov/pds4/pds/v1" schemaLocation="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1D00.xsd"/>
  
@@ -32,7 +32,7 @@ _TBD_Ingest_LDD
         mission-specific metadata elements.</xs:documentation>
     </xs:annotation>
     <xs:sequence>
-      <xs:element name="mission_phase_name" type="mvn:mission_phase_name" minOccurs="1" maxOccurs="unbounded"> </xs:element>
+      <xs:element name="mission_phase_name" nillable="true" type="mvn:mission_phase_name" minOccurs="0" maxOccurs="unbounded"> </xs:element>
       <xs:element name="spacecraft_clock_start_count" type="mvn:spacecraft_clock_start_count" minOccurs="0" maxOccurs="1"> </xs:element>
       <xs:element name="spacecraft_clock_stop_count" type="mvn:spacecraft_clock_stop_count" minOccurs="0" maxOccurs="1"> </xs:element>
       <xs:element name="mission_event_time_start_count" type="mvn:mission_event_time_start_count" minOccurs="0" maxOccurs="1"> </xs:element>
@@ -40,7 +40,7 @@ _TBD_Ingest_LDD
       <xs:element name="Parameter" type="mvn:Parameter" minOccurs="0" maxOccurs="unbounded"> </xs:element>
     </xs:sequence>
     <!-- Begin assert statements for schematron - Enumerated Values -->
-    <!-- <xs:assert test="mvn:mission_phase_name = ('Cruise', 'Mars Orbital Insertion', 'Prime Mission', 'Transition')"/> -->
+    <!-- <xs:assert test="mvn:mission_phase_name = ('Cruise', 'EM-1', 'EM-2', 'EM-3', 'EM-4', 'EM-5', 'Mars Orbital Insertion', 'Prime Mission', 'Transition')"/> -->
     <!-- End assert statements for schematron - Enumerated Values -->
   </xs:complexType>
 
@@ -90,16 +90,17 @@ _TBD_Ingest_LDD
 	   </xs:restriction>
   </xs:simpleType>
 
-  <xs:simpleType name="mission_phase_name">
+  <xs:complexType name="mission_phase_name">
     <xs:annotation>
       <xs:documentation>The mission_phase_name attribute provides the
         mission-defined name of a mission phase.</xs:documentation>
     </xs:annotation>
-    <xs:restriction base="pds:ASCII_Short_String_Collapsed">
-     <xs:minLength value="1"/>
-     <xs:maxLength value="255"/>
-	   </xs:restriction>
-  </xs:simpleType>
+    <xs:simpleContent>
+      <xs:extension base="pds:ASCII_Short_String_Collapsed">
+        <xs:attribute name="nilReason" type="pds:nil_reason" use="optional" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
 
   <xs:simpleType name="spacecraft_clock_start_count">
     <xs:annotation>

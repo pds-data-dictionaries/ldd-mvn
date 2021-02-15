@@ -2,12 +2,12 @@ PDS4 Local Data Dictionary Processing Report
 
 Configuration:
    LDDTool Version        10.1.0
-   LDD Version Id:        1.0.1.1
+   LDD Version Id:        1.1.1.0
    LDD Label Version Id:  1.0
    LDD Discipline (T/F):  false
    LDD Namespace URL:     http://pds.nasa.gov/pds4/
    LDD URN Prefix:        urn:nasa:pds:
-   Time                   Fri Feb 12 00:32:56 UTC 2021
+   Time                   Fri Feb 12 22:28:09 UTC 2021
    Common Schema          [PDS4_PDS_1D00.xsd]
    Common Schematron      [PDS4_PDS_1D00.sch]
    IM Version Id:         1.13.0.0
@@ -40,12 +40,12 @@ Detailed validation messages
 
 Parsed Input - Header:
    LDD Name               MAVEN
-   LDD Version            1.0.1.1
+   LDD Version            1.1.1.0
    Full Name              Joseph N. Mafi
    Steward                ppi
    Namespace Id           mvn
    Comment                _TBD_Ingest_LDD
-   Last Modification Time 2015-05-18T13:30:00Z
+   Last Modification Time 2020-02-12T14:26:54Z
    PDS4 Merge Flag        false
 
 Parsed Input - Attributes:
@@ -54,6 +54,7 @@ Parsed Input - Attributes:
    version                1.13
    value data type        ASCII_Short_String_Collapsed
    description            The mission_phase_name attribute provides the mission-defined name of a mission phase.
+   nillable               true
    maximum characters     255
 
    name                   spacecraft_clock_start_count
@@ -87,7 +88,7 @@ Parsed Input - Classes:
    Associations
 
       local identifier      mvn.mission_phase_name
-      minimum occurrences   1
+      minimum occurrences   0
       maximum occurrences   *
       reference type        attribute_of
 

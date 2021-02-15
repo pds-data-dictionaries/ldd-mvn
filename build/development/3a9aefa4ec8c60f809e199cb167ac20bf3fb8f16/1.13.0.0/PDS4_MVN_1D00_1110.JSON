@@ -3,7 +3,7 @@
     "dataDictionary": {
       "Title": "PDS4 Data Dictionary" ,
       "Version": "1.13.0.0" ,
-      "Date": "Fri Feb 12 00:32:56 UTC 2021" ,
+      "Date": "Fri Feb 12 22:28:09 UTC 2021" ,
       "Description": "This document is a dump of the contents of the PDS4 Data Dictionary" ,
       "classDictionary": [
         {
@@ -26,7 +26,7 @@
                 "isChoice": "false" ,
                 "isAny": "false" ,
                 "groupName": "null" ,
-                "minimumCardinality": "1" ,
+                "minimumCardinality": "0" ,
                 "maximumCardinality": "*" ,
                 "classOrder": "1010" ,
                 "attributeId": [
@@ -241,7 +241,7 @@
             "steward": "ppi" ,
             "versionId": "1.13" ,
             "description": "The mission_phase_name attribute provides the mission-defined name of a mission phase." ,
-            "isNillable": "false" ,
+            "isNillable": "true" ,
             "isEnumerated": "true" ,
             "isDeprecated": "false" ,
             "dataType": "ASCII_Short_String_Collapsed" ,
@@ -258,7 +258,37 @@
           , "PermissibleValueList": [
               {"PermissibleValue": {
                   "value": "Cruise" ,
-                  "valueMeaning": "The period of observations while traveling to a destination." ,
+                  "valueMeaning": "The period of observations during the MAVEN's flight from Earth to Mars." ,
+                  "isDeprecated": "false"
+                }
+             }
+            , {"PermissibleValue": {
+                  "value": "EM-1" ,
+                  "valueMeaning": "Extended Mission 1: The period of observations during the first extension of the MAVEN mission covering 2015-11-17T00:00:00 to 2016-10-01T00:00:00." ,
+                  "isDeprecated": "false"
+                }
+             }
+            , {"PermissibleValue": {
+                  "value": "EM-2" ,
+                  "valueMeaning": "Extended Mission 2: The period of observations during the second extension of the MAVEN mission covering 2016-10-01T00:00:00 to 2018-10-01T00:00:00." ,
+                  "isDeprecated": "false"
+                }
+             }
+            , {"PermissibleValue": {
+                  "value": "EM-3" ,
+                  "valueMeaning": "Extended Mission 3: The period of observations during the third extension of the MAVEN mission covering 2018-10-01T00:00:00 to 2019-10-01T00:00:00." ,
+                  "isDeprecated": "false"
+                }
+             }
+            , {"PermissibleValue": {
+                  "value": "EM-4" ,
+                  "valueMeaning": "Extended Mission 4: The period of observations during the fourth extension of the MAVEN mission covering 2019-10-01T00:00:00 to 2021-10-01T00:00:00." ,
+                  "isDeprecated": "false"
+                }
+             }
+            , {"PermissibleValue": {
+                  "value": "EM-5" ,
+                  "valueMeaning": "Extended Mission 5: The period of observations during the fifth extension of the MAVEN mission covering 2021-10-01T00:00:00 and extending indefinitely." ,
                   "isDeprecated": "false"
                 }
              }
